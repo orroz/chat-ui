@@ -3,7 +3,7 @@ Add your general design and decision comments here:
 Challenge was solved using react and redux.
 All source code is under ./src directory.
 Framework used for tests is jest and all tests are under ./__test__ directory.
-socket.io calls were combine as a middleware of the store before dispatching of actions.
+socket.io calls were combine as a middleware of the store before dispatching of actions to reducer.
 userName and avatar index were saved on local storage for persistency .
 
 To run:
