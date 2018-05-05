@@ -1,0 +1,25 @@
+Add your general design and decision comments here:
+
+Challenge was solved using react and redux.
+All source code is under ./src directory.
+Framework used for tests is jest and all tests are under ./__test__ directory.
+socket.io calls were combine as a middleware of the store before dispatching of actions.
+userName and avatar index were saved on local storage for persistency .
+
+To run:
+1. Fetch repository from git.
+2. Run npm i
+3. Run npm start
+4. Open at least 2 windows with localhost:3000
+5. Add a user name for each of the windows (They must be unique).
+6. Write your message down and press enter (or click send).
+
+*. to change avatar on the window - open console log. type: localStorage.avatarIndex = {any number between 0 to 4}. and refresh.
+
+To run tests:
+
+1. npm tests
+2. Tests included - unit testing for all actions on reducer + snapshot testing for all components.
+
+Feedback regarding this exam is always welcomed.
+What did you like? What didn't you like? What was missing?

@@ -11,7 +11,7 @@ export function wsMiddleware() {
 	return (next) => (action) => {
 		if (socket && action.type === ADD_MESSAGE) {
 			console.log('wsMiddleware : ADD_MESSAGE', action.payload);
-			if(!action.payload || !action.payload.name || !action.payload.title || !action.payload.id){
+			if(!action.payload || !userId || !avatarIndex || !action.payload.id || !action.payload.title){
 				console.log("ws: not sending invalid message");
 				return;
 			}
