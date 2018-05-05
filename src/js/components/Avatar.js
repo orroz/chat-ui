@@ -6,11 +6,11 @@ import avatarStore from "../modules/avatarStore";
 const mapStateToProps = state => {
 	return { avatarIndex: state.avatarIndex };
 };
-const ConnectedAvatarIcon = ({ avatarIndex }) => {
+const AvatarIcon = ({ avatarIndex }) => {
 	let avatarUrl = avatarStore.getAvatarUrlByIndex(avatarIndex);
 	return (<div className="avatarWrapper">
 		<img className="avatarIcon" src={avatarUrl}></img>
 	</div>)
 };
-const AvatarIcon = connect(mapStateToProps)(ConnectedAvatarIcon);
-export default AvatarIcon;
+const ConnectedAvatarIcon = connect(mapStateToProps)(AvatarIcon);
+export default ConnectedAvatarIcon;

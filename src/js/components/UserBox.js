@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
 	return { name: state.name };
 };
-class ConnectedUserBox extends Component {
+class UserBox extends Component {
 	constructor() {
 		super();
 		this.handleChange = this.handleChange.bind(this);
@@ -40,5 +40,5 @@ class ConnectedUserBox extends Component {
 		);
 	}
 }
-const UserBox = connect(mapStateToProps, mapDispatchToProps)(ConnectedUserBox);
-export default UserBox;
+const ConnectedUserBox = connect(mapStateToProps, mapDispatchToProps)(UserBox);
+export default ConnectedUserBox;

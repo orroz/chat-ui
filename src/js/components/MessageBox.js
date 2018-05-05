@@ -9,9 +9,9 @@ const mapDispatchToProps = dispatch => {
 		addMessage: message => dispatch(addMessage(message))
 	};
 };
-class ConnectedMessageBox extends Component {
-	constructor() {
-		super();
+class MessageBox extends Component {
+	constructor(props) {
+		super(props);
 		this.state = {
 			title: ""
 		};
@@ -45,12 +45,12 @@ class ConnectedMessageBox extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-				<button type="submit" className="btn btn-success btn-lg">
+				<button type="submit" className="sendButton btn btn-success btn-lg">
 					Send
 				</button>
 			</form>
 		);
 	}
 }
-const MessageBox = connect(null, mapDispatchToProps)(ConnectedMessageBox);
-export default MessageBox;
+const ConnectedMessageBox = connect(null, mapDispatchToProps)(MessageBox);
+export default ConnectedMessageBox;
