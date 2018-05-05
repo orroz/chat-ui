@@ -1,0 +1,22 @@
+{
+  "browserify": true,
+  "browser": true,
+  "debug": false,
+  "undef": true,
+  "unused": true,
+  "maxerr": 100,
+  "eqnull": true,
+  "eqeqeq": false,
+  "maxdepth": 5,
+  "noarg": true,
+  "asi":true,
+  "esversion":6,
+  "funcscope": true,
+  "node": false,
+  "strict": false,
+  "globalstrict": false,
+  // relaxed comma warnings
+  "laxcomma": true,
+  "laxbreak": true,
+  "-W058": true // disable "Missing '()' invoking a constructor. (W058)"
+}
