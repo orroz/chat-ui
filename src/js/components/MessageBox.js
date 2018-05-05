@@ -13,7 +13,7 @@ export class MessageBox extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			title: ""
+			text: ""
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,24 +23,24 @@ export class MessageBox extends Component {
 	}
 	handleSubmit(event) {
 		event.preventDefault();
-		if(!this.state.title){
+		if(!this.state.text){
 			return;
 		}
-		const { title } = this.state;
+		const { text } = this.state;
 		const id = uuidv1();
-		this.props.addMessage({ title, id, sendOut: true });
-		this.setState({ title: "" });
+		this.props.addMessage({ text, id, sendOut: true });
+		this.setState({ text: "" });
 	}
 	render() {
-		const { title } = this.state;
+		const { text } = this.state;
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="form-group">
 					<input
 						type="text"
 						className="form-control"
-						id="title"
-						value={title}
+						id="text"
+						value={text}
 						onChange={this.handleChange}
 					/>
 				</div>

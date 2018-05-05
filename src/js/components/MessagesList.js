@@ -17,7 +17,7 @@ export class MessagesList extends Component {
 					let wrapperClass = el.isMe ? "isMe" : "isOther";
 					return (<li className="list-group-item" key={el.id}>
 						<div className={wrapperClass}><AvatarIcon avatarIndex={el.avatarIndex} />
-							<span className="chatName">{el.name}</span> : <span className="chatContent">{el.content}</span></div>
+							<span className="chatName">{el.name}</span> : <span className="chatContent">{el.text}</span></div>
 					</li>);
 				})}
 			</ul>);

@@ -11,11 +11,11 @@ export function wsMiddleware() {
 	return (next) => (action) => {
 		if (socket && action.type === ADD_MESSAGE) {
 			console.log('wsMiddleware : ADD_MESSAGE', action.payload);
-			if(!action.payload || !userId || !avatarIndex || !action.payload.id || !action.payload.title){
+			if(!action.payload || !userId || !avatarIndex || !action.payload.id || !action.payload.text){
 				console.log("ws: not sending invalid message");
 				return;
 			}
-			socket.emit('spotim/chat', {...action.payload, "name" : userId, "avatarIndex": avatarIndex});
+			socket.emit('spotim/chat', {...action.payload, "userName" : userId, "avatar": avatarIndex});
 		}
 		if (action.type === CHANGE_USERNAME) {
 			userId = action.payload;
@@ -32,20 +32,20 @@ export default function (store) {
 		avatarIndex = currentState.avatarIndex;
 		console.log("connected to chat server!");
 		socket.on('spotim/chat', function (data) {
-			if(data.name == userId){
+			if(data.userName == userId){
 				console.log("received own message");
 				return;
 			}
 			console.log("chatMessage incoming :", data);
-			if(!data.title || !data.id || !data.name || !data.avatarIndex) {
+			if(!data.text || !data.id || !data.userName || !data.avatar) {
 				console.log("received invalid message");
 				return;
 			}
 			store.dispatch(receiveMessage({
-				"title": data.title,
+				"text": data.text,
 				"id": data.id,
-				"name": data.name,
-				"avatarIndex": data.avatarIndex,
+				"name": data.userName,
+				"avatarIndex": data.avatar,
 				"sendOut" : false
 			}));
 		});
