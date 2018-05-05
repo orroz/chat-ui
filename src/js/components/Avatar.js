@@ -6,7 +6,7 @@ import avatarStore from "../modules/avatarStore";
 const mapStateToProps = state => {
 	return { avatarIndex: state.avatarIndex };
 };
-const AvatarIcon = ({ avatarIndex }) => {
+export const AvatarIcon = ({ avatarIndex }) => {
 	let avatarUrl = avatarStore.getAvatarUrlByIndex(avatarIndex);
 	return (<div className="avatarWrapper">
 		<img className="avatarIcon" src={avatarUrl}></img>

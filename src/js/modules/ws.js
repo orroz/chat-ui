@@ -11,6 +11,10 @@ export function wsMiddleware() {
 	return (next) => (action) => {
 		if (socket && action.type === ADD_MESSAGE) {
 			console.log('wsMiddleware : ADD_MESSAGE', action.payload);
+			if(!action.payload || !action.payload.name || !action.payload.title || !action.payload.id){
+				console.log("ws: not sending invalid message");
+				return;
+			}
 			socket.emit('spotim/chat', {...action.payload, "name" : userId, "avatarIndex": avatarIndex});
 		}
 		if (action.type === CHANGE_USERNAME) {

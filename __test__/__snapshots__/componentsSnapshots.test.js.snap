@@ -1,0 +1,82 @@
+exports[`>>> AvatarIcon --- Snapshot comparison +++capturing Snapshot of AvatarIcon with with icon index 2 - pikachu 1`] = `
+<div
+  className="avatarWrapper">
+  <img
+    className="avatarIcon"
+    src="https://spotim-demo-chat-server.herokuapp.com/avatars/003-pikachu.png" />
+</div>
+`;
+
+exports[`>>> MessageBox --- Snapshot comparison +++capturing Snapshot of MessageBox 1`] = `
+<form
+  onSubmit={[Function]}>
+  <div
+    className="form-group">
+    <input
+      className="form-control"
+      id="title"
+      onChange={[Function]}
+      type="text"
+      value="" />
+  </div>
+  <button
+    className="sendButton btn btn-success btn-lg"
+    type="submit">
+    Send
+  </button>
+</form>
+`;
+
+exports[`>>> MessagesList --- Snapshot comparison +++capturing Snapshot of MessagesList with no messages 1`] = `
+<ul
+  className="list-group list-group-flush" />
+`;
+
+exports[`>>> MessagesList --- Snapshot comparison +++capturing Snapshot of MessagesList with one message 1`] = `
+<ul
+  className="list-group list-group-flush">
+  <li
+    className="list-group-item">
+    <div
+      className="isOther">
+      <div
+        className="avatarWrapper">
+        <img
+          className="avatarIcon"
+          src="https://spotim-demo-chat-server.herokuapp.com/avatars/002-psyduck.png" />
+      </div>
+      <span
+        className="chatName">
+        mock message
+      </span>
+       : 
+      <span
+        className="chatContent" />
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`>>> UserBox --- Snapshot comparison +++capturing Snapshot of UserBox with no name 1`] = `
+<div
+  className="form-group">
+  <input
+    className="form-control"
+    id="name"
+    onChange={[Function]}
+    type="text"
+    value={undefined} />
+</div>
+`;
+
+exports[`>>> UserBox --- Snapshot comparison +++capturing Snapshot of UserBox with user name 1`] = `
+<div
+  className="form-group">
+  <input
+    className="form-control"
+    id="name"
+    onChange={[Function]}
+    type="text"
+    value="Or Rosenthal" />
+</div>
+`;

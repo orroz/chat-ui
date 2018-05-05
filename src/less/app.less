@@ -1,9 +1,4 @@
 
-@import (less) "../../node_modules/bootstrap/less/bootstrap";
-@import (less) "./includes/mobile.less";
-
-@brand-color: #A5E41C;
-
 .avatarWrapper {
   padding-top: 30px;
   .avatarIcon {
@@ -14,6 +9,13 @@
 .chatBox{
   height: 70vh;
   border:solid 1px black;
+  .avatarWrapper {
+    display: inline;
+    .avatarIcon {
+      width: 40px;
+      margin-right: 15px;
+    }
+  }
 }
 
 .controlBox{
@@ -41,3 +43,6 @@
     font-size: 18px;
   }
 }
+
+@import (less) "../../node_modules/bootstrap/less/bootstrap";
+@import (less) "./includes/mobile.less";

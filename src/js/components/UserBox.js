@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
 	return { name: state.name };
 };
-class UserBox extends Component {
+export class UserBox extends Component {
 	constructor() {
 		super();
 		this.handleChange = this.handleChange.bind(this);

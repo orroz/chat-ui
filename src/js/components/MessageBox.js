@@ -9,7 +9,7 @@ const mapDispatchToProps = dispatch => {
 		addMessage: message => dispatch(addMessage(message))
 	};
 };
-class MessageBox extends Component {
+export class MessageBox extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -36,7 +36,6 @@ class MessageBox extends Component {
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="form-group">
-					{/*<label htmlFor="title">Title</label>*/}
 					<input
 						type="text"
 						className="form-control"
