@@ -18,7 +18,7 @@ To run:
 
 To run tests:
 
-1. npm tests
+1. npm test
 2. Tests included - unit testing for all actions on reducer + snapshot testing for all components.
 
 Feedback regarding this exam is always welcomed.
